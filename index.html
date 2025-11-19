@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLIO Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">BLI<span class="logo-purple">O</span></h1>
+            <nav>
+                <a href="#">Início</a>
+                <a href="#">Filmes</a>
+                <a href="#">Séries</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+        <h2 class="section-title">Filmes Populares</h2>
+        
+        <!-- A grade de filmes será preenchida pelo JavaScript -->
+        <div id="movie-grid" class="movie-grid"></div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="main-footer">
+        <p>&copy; 2025 BLIO. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- MODAL (Começa escondido) -->
+    <div id="modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <!-- Botão de Fechar -->
+            <button id="modal-close" class="modal-close-btn">&times;</button>
+
+            <!-- Lado Esquerdo: Poster e Infos -->
+            <div class="modal-left">
+                <img id="modal-poster" src="" alt="Pôster do Filme">
+                <h3 id="modal-title">Título do Filme</h3>
+                <p id="modal-synopsis">Sinopse do filme aqui...</p>
+            </div>
+
+            <!-- Lado Direito: Avaliações -->
+            <div class="modal-right">
+                <h4>Avaliações</h4>
+                <div id="comments-list" class="comments-list">
+                    <!-- Comentários serão inseridos aqui pelo JS -->
+                </div>
+                
+                <h4>Deixe sua avaliação</h4>
+                <form id="rating-form" class="rating-form">
+                    <div class="stars">
+                        <span data-value="1">&#9733;</span>
+                        <span data-value="2">&#9733;</span>
+                        <span data-value="3">&#9733;</span>
+                        <span data-value="4">&#9733;</span>
+                        <span data-value="5">&#9733;</span>
+                    </div>
+                    <input type="hidden" id="rating-score" value="0">
+                    <textarea id="rating-comment" placeholder="Escreva seu comentário..." required></textarea>
+                    <button type="submit" class="button-purple">Enviar Avaliação</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link para o nosso JavaScript (sempre no final do body) -->
+    <script src="script.js"></script>
+</body>
+</html>
